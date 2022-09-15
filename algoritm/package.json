@@ -8,11 +8,8 @@
 	},
 	"scripts": {
 		"test": "jest",
-		"lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
-		"lint:fix": "eslint --ignore-path .gitignore --ext .js,.ts --fix .",
-		"prettier": "prettier --ignore-path .gitignore --check .",
-		"prettier:write": "prettier --ignore-path .gitignore --write .",
-		"format": "run-s lint:fix prettier:write"
+		"lint": "eslint --ignore-path .gitignore --ext .js,.ts --fix .",
+		"format": "prettier --ignore-path .gitignore --write ."
 	},
 	"devDependencies": {
 		"@jest/globals": "^29.0.3",

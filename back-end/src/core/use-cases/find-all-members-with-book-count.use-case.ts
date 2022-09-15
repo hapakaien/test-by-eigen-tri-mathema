@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { Member } from '../entities/member.entity';
 import { IMemberRepository } from '../interfaces/member.interface';
 
 @Injectable()

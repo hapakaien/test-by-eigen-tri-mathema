@@ -1,0 +1,9 @@
+{
+	"private": true,
+  "scripts": {
+		"lint": "pnpm -r lint",
+		"format": "pnpm -r format",
+		"build": "pnpm -r build",
+    "test": "pnpm -r test"
+  }
+}

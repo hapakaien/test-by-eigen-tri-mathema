@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { Book } from '../entities/book.entity';
 import { IBookRepository } from '../interfaces/book.interface';
 
 @Injectable()
