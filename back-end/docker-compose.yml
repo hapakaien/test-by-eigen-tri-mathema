@@ -1,0 +1,28 @@
+version: '3'
+services:
+  postgres:
+    image: docker.io/library/postgres:14-alpine
+    ports:
+      - '${DB_PORT:-5432}:5432'
+    volumes:
+      - 'postgres-data:/var/lib/postgresql/data'
+    environment:
+      POSTGRES_USER: ${DB_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+      POSTGRES_DB: ${DB_DATABASE:-postgres}
+    healthcheck:
+      test:
+        [
+          'CMD',
+          'pg_isready',
+          '-q',
+          '-d',
+          '${DB_USERNAME:-postgres}',
+          '-U',
+          '${DB_PASSWORD:-postgres}',
+        ]
+      retries: 3
+      timeout: 5s
+
+volumes:
+  postgres-data:
